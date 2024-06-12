@@ -1,0 +1,18 @@
+﻿@model AppMVC.Models.Produto
+<h1>Detalhes do produto</h1>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Nome</dt>
+        <dd>@Model.Name</dd>
+        <dt>Preço</dt>
+        <dd>@Model.Price</dd>
+        <dt>Descrição</dt>
+        <dd>@Model.Description</dd>
+    </dl>
+</div>
+<div>
+    <a href="/Produtos/Edit/@Model.Id">Editar</a> |
+    <a href="/Produtos">Retornar ao Inicio</a>
+</div>

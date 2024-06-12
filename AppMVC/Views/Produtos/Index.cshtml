@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AppMVC.Models.Produto>
+
+<div class="d-flex justify-content-between">
+    <h1>Produtos</h1>
+
+    <p>
+        <a href="/Produtos/Create">Criar um novo produto</a>
+    </p>
+
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Description</td>
+                <td>
+                    <a href="/Produtos/Edit/@item.Id">Editar</a> |
+                    <a href="/Produtos/Details/@item.Id">Detalhes</a> |
+                    <a href="/Produtos/Delete/@item.Id">Deletar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
